@@ -74,6 +74,7 @@ import SearchBar from '../components/searchbar/searchbar';
 import ImageGallery from './imageGallery/imageGallery';
 import ImageGalleryItem from './imgGalleryItem/imgGalleryItem';
 import Button from '../components/button/button';
+import Loader from './loader/loader';
 
 export default class App extends Component {
   // state = {
@@ -112,6 +113,7 @@ export default class App extends Component {
         <ImageGallery searchName={this.state.searchName} />
         <ImageGalleryItem />
         <Button />
+        <Loader searchName={this.state.searchName}/>
       </div>
     );
   }
