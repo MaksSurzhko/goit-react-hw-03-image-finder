@@ -16,7 +16,16 @@
 
 .btn{
     border: none;
+    border: 1px solid gray;
     border-radius: 10px;
     margin-left: 5px;
     width: 100px;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.btn:hover{
+    border: none;
+    background-color: gray;
+    color: white;
 }

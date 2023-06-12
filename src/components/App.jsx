@@ -245,6 +245,7 @@ export default class App extends Component {
       return;
     }
 
+
     this.setState({ searchName, images: [], currentPage: 1 });
     this.fetchImages(searchName, 1);
   };
@@ -264,6 +265,11 @@ export default class App extends Component {
     )
       .then((response) => response.json())
       .then((data) => {
+
+        if (data.hits.length === 0) {
+          alert('Error! Cannot find');
+        }
+
         if (page === 1) {
           this.setState({ images: data.hits });
         } else {
