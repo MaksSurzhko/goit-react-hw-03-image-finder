@@ -71,7 +71,7 @@ export default class Loader extends Component {
             this.setState({ images });
           })
           .finally(() => this.setState({ loading: false }));
-      }, 5000);
+      }, 2000);
     }
   }
 
