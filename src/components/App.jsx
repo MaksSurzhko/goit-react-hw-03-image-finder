@@ -229,7 +229,7 @@ import SearchBar from '../components/searchbar/searchbar';
 import ImageGallery from './imageGallery/imageGallery';
 import Button from '../components/button/button';
 import Loader from './loader/loader';
-import Lightbox from './modal/modal';
+//import Lightbox from './modal/modal';
 
 export default class App extends Component {
   state = {
@@ -303,7 +303,6 @@ export default class App extends Component {
           </>
         )}
         <Loader searchName={searchName} />
-        <Lightbox />
       </div>
     );
   }
