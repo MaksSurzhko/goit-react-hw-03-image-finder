@@ -1,0 +1,22 @@
+.form{
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: rgb(51, 93, 172);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.input{
+    border-radius: 10px;
+    border: none;
+    width: 600px;
+    height: 35px;
+}
+
+.btn{
+    border: none;
+    border-radius: 10px;
+    margin-left: 5px;
+    width: 100px;
+}

@@ -44,50 +44,78 @@ export default class SearchBar extends Component{
     //}
 //export default SearchBar;*/
 
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-class SearchBar extends Component {
-  state = {
-    searchName: '',
-  };
+// class SearchBar extends Component {
+//   state = {
+//     searchName: '',
+//   };
 
-  handleChangeName = (event) => {
-    this.setState({ searchName: event.currentTarget.value.toLowerCase() });
-  };
+//   handleChangeName = (event) => {
+//     this.setState({ searchName: event.currentTarget.value.toLowerCase() });
+//   };
 
-  handleSubmit = (event) => {
-      event.preventDefault();
+//   handleSubmit = (event) => {
+//       event.preventDefault();
 
-      if (this.state.searchName.trim() === ''){
-          alert("Please use text");
-      return;
-        }
+//       if (this.state.searchName.trim() === ''){
+//           alert("Please use text");
+//       return;
+//         }
       
-      this.props.onSubmit(this.state.searchName)
-    this.setState({ searchName: '' });
+//       this.props.onSubmit(this.state.searchName)
+//     this.setState({ searchName: '' });
+//   };
+
+//   render() {
+//     return (
+//       <header className="searchbar">
+//         <form onSubmit={this.handleSubmit} className="form">
+//           <button type="submit" className="button">
+//             <span className="button-label">Search</span>
+//           </button>
+
+//           <input
+//             className="input"
+//             type="text"
+//             autoComplete="off"
+//             autoFocus
+//             value={this.state.searchName}
+//             onChange={this.handleChangeName}
+//             placeholder="Search images and photos"
+//           />
+//         </form>
+//       </header>
+//     );
+//   }
+// }
+
+// export default SearchBar;
+
+
+
+import React, { useState } from 'react';
+import scss from '../searchbar/searchbar.module.css'
+
+
+const SearchBar = ({ onSubmit }) => {
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleChange = (e) => {
+    setSearchValue(e.target.value);
   };
 
-  render() {
-    return (
-      <header className="searchbar">
-        <form onSubmit={this.handleSubmit} className="form">
-          <button type="submit" className="button">
-            <span className="button-label">Search</span>
-          </button>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(searchValue);
+  };
 
-          <input
-            className="input"
-            type="text"
-            autoComplete="off"
-            autoFocus
-            value={this.state.searchName}
-            onChange={this.handleChangeName}
-            placeholder="Search images and photos"
-          />
-        </form>
-      </header>
-    );
-  }
-}
+  return (
+    <form className={scss.form} onSubmit={handleSubmit}>
+      <input className={scss.input} type="text" value={searchValue} onChange={handleChange} />
+      <button className={scss.btn} type="submit">Search</button>
+    </form>
+  );
+};
 
 export default SearchBar;
