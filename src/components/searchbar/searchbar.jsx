@@ -1,30 +1,4 @@
 
-// import React, { useState } from 'react';
-// import scss from '../searchbar/searchbar.module.css'
-
-
-// const SearchBar = ({ onSubmit }) => {
-//   const [searchValue, setSearchValue] = useState('');
-
-//   const handleChange = (e) => {
-//     setSearchValue(e.target.value);
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     onSubmit(searchValue);
-//   };
-
-//   return (
-//     <form className={scss.form} onSubmit={handleSubmit}>
-//       <input className={scss.input} type="text" value={searchValue} onChange={handleChange} />
-//       <button className={scss.btn} type="submit">Search</button>
-//     </form>
-//   );
-// };
-
-// export default SearchBar;
-
 import React, { Component } from 'react';
 import scss from '../searchbar/searchbar.module.css'
 
