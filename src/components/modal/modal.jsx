@@ -1,17 +1,3 @@
-// import React from "react";
-// import mcss from '../modal/mcss.module.css'
-
-// const Modal = ({ active, setActive }) => {
-//     return (
-//         <div  className={ active ? mcss.active : mcss.modal}  onClick={()=>setActive(false)}>
-//             <div className={mcss.modalCont}  onClick={e => e.stopPropagination()}>
-
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Modal;
 
 import React from "react";
 import mcss from '../modal/mcss.module.css';
