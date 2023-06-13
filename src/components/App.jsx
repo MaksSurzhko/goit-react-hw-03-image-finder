@@ -171,6 +171,7 @@ export default class App extends Component {
     const { searchName, currentPage } = this.state;
     const nextPage = currentPage + 1;
     this.fetchImages(searchName, nextPage);
+     
   };
 
   openModal = (image) => {
@@ -182,7 +183,7 @@ export default class App extends Component {
   };
 
   render() {
-    const { images, searchName, loading, modalOpen, selectedImage } = this.state;
+    const { images, loading, modalOpen, selectedImage } = this.state;
 
     return (
       <div>
